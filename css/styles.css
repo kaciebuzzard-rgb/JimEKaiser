@@ -1,3 +1,5 @@
+/* RESET */
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -24,20 +26,24 @@ a{
   text-decoration:none;
 }
 
+
+/* CONTAINER */
+
 .container{
   width:1100px;
   max-width:92%;
   margin:auto;
 }
 
-/* HEADER / NAVIGATION */
+
+/* HEADER */
+
 .site-header{
   position:sticky;
   top:0;
   z-index:1000;
   background:rgba(255,255,255,.92);
   backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(0,0,0,.06);
   box-shadow:0 4px 20px rgba(0,0,0,.04);
 }
@@ -65,20 +71,21 @@ a{
   margin-left:26px;
   color:#444;
   font-weight:500;
-  transition:color .2s ease, transform .15s ease;
+  transition:color .2s ease;
 }
 
 .nav a:hover{
   color:#2c6df2;
-  transform:translateY(-1px);
 }
 
+
 /* HERO */
+
 .hero{
   position:relative;
   background:
-    linear-gradient(rgba(10,25,40,.80), rgba(10,25,40,.88)),
-    url('/assets/img/skyline.png');
+  linear-gradient(rgba(10,25,40,.80), rgba(10,25,40,.88)),
+  url('/assets/img/skyline.png');
   background-size:cover;
   background-position:center;
   color:white;
@@ -96,7 +103,7 @@ a{
   text-transform:uppercase;
   font-size:12px;
   letter-spacing:1.5px;
-  opacity:.82;
+  opacity:.8;
   margin-bottom:10px;
 }
 
@@ -115,7 +122,6 @@ a{
 .hero-actions{
   margin-top:25px;
   display:flex;
-  flex-wrap:wrap;
   gap:12px;
 }
 
@@ -133,7 +139,9 @@ a{
   object-fit:cover;
 }
 
+
 /* BUTTONS */
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -143,12 +151,11 @@ a{
   color:white;
   border-radius:6px;
   font-weight:600;
-  transition:transform .2s ease, background .2s ease, opacity .2s ease;
+  transition:transform .2s ease;
 }
 
 .btn:hover{
   transform:translateY(-2px);
-  opacity:.98;
 }
 
 .btn-secondary{
@@ -161,7 +168,9 @@ a{
   background:rgba(255,255,255,.08);
 }
 
+
 /* SECTIONS */
+
 .section{
   padding:90px 0;
 }
@@ -181,39 +190,38 @@ a{
 .section h2{
   font-size:36px;
   margin-bottom:20px;
-  line-height:1.2;
 }
 
 .narrow{
   max-width:700px;
 }
 
+
 /* LEADERSHIP PHOTO SECTION */
+
 .leadership-photo-grid{
   display:grid;
-  grid-template-columns:420px 1fr;
-  gap:60px;
+  grid-template-columns:260px 1fr;
+  gap:50px;
   align-items:center;
 }
 
 .leadership-photo-image{
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 }
 
 .leadership-photo{
   width:100%;
-  max-width:420px;
+  max-width:220px;
   border-radius:14px;
-  box-shadow:0 20px 50px rgba(0,0,0,.18);
+  box-shadow:0 20px 40px rgba(0,0,0,.18);
   object-fit:cover;
 }
 
 .leadership-photo-text h2{
   margin:10px 0 18px;
-  font-size:36px;
-  line-height:1.2;
 }
 
 .leadership-photo-text p{
@@ -221,7 +229,9 @@ a{
   color:#444;
 }
 
+
 /* PANELS */
+
 .two-col{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -244,7 +254,9 @@ a{
   margin-bottom:10px;
 }
 
-/* RESUME / CONTACT */
+
+/* RESUME */
+
 .resume-block{
   display:flex;
   justify-content:space-between;
@@ -252,14 +264,18 @@ a{
   gap:40px;
 }
 
+
+/* CONTACT */
+
 .contact-actions{
   margin-top:20px;
   display:flex;
   gap:14px;
-  flex-wrap:wrap;
 }
 
+
 /* FOOTER */
+
 .site-footer{
   background:#111;
   color:#aaa;
@@ -268,54 +284,55 @@ a{
   margin-top:40px;
 }
 
+
 /* RESPONSIVE */
-@media (max-width:980px){
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
 
-  .profile-photo{
-    width:280px;
-  }
+@media (max-width:900px){
 
-  .leadership-photo-grid{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
+.hero-grid{
+  grid-template-columns:1fr;
+  gap:40px;
+}
 
-  .leadership-photo{
-    max-width:100%;
-  }
+.profile-photo{
+  width:260px;
+}
 
-  .leadership-photo-text p{
-    font-size:16px;
-  }
+.leadership-photo-grid{
+  grid-template-columns:1fr;
+}
 
-  .two-col{
-    grid-template-columns:1fr;
-  }
+.leadership-photo{
+  max-width:200px;
+}
 
-  .resume-block{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+.two-col{
+  grid-template-columns:1fr;
+}
+
+.resume-block{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
 }
 
 @media (max-width:640px){
-  .hero{
-    padding:90px 0;
-  }
 
-  .hero h1{
-    font-size:34px;
-  }
+.hero{
+  padding:90px 0;
+}
 
-  .hero-text{
-    font-size:16px;
-  }
+.hero h1{
+  font-size:34px;
+}
 
-  .nav{
-    display:none;
-  }
+.hero-text{
+  font-size:16px;
+}
+
+.nav{
+  display:none;
+}
+
 }
