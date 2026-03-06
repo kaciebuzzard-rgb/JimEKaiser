@@ -1,10 +1,10 @@
 .hero{
-position:relative;
-background:
-linear-gradient(rgba(10,25,40,.80), rgba(10,25,40,.88)),
-url('/assets/img/skyline.png');
-background-size:cover;
-background-position:center;
-color:white;
-padding:120px 0;
+  position:relative;
+  background:
+    linear-gradient(rgba(10,25,40,.80), rgba(10,25,40,.88)),
+    url('/assets/img/skyline.png');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:120px 0;
 }
