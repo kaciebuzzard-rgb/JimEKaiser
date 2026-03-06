@@ -1,212 +1,71 @@
-body{
-font-family:Inter, sans-serif;
-margin:0;
-background:#f5f7fa;
-color:#1a1f26;
-line-height:1.6;
-}
-
-.container{
-width:1100px;
-max-width:92%;
-margin:auto;
-}
+/* =========================
+HEADER / NAVIGATION
+========================= */
 
 .site-header{
-background:white;
-border-bottom:1px solid #eee;
+
+position:sticky;
+top:0;
+z-index:1000;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(0,0,0,.06);
+
+box-shadow:0 4px 20px rgba(0,0,0,.04);
+
 }
 
 .nav-wrap{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 padding:20px 0;
+
 }
 
 .logo{
+
 font-weight:700;
 text-decoration:none;
 color:#1a1f26;
+
 font-size:18px;
+letter-spacing:.3px;
+
+}
+
+.nav{
+
+display:flex;
+align-items:center;
+
 }
 
 .nav a{
-margin-left:22px;
+
+margin-left:26px;
+
 text-decoration:none;
 color:#444;
+
 font-weight:500;
+
+transition:
+color .2s ease,
+transform .15s ease;
+
 }
 
-.hero{
-background:#0d1c2b;
-color:white;
-padding:120px 0;
-}
+.nav a:hover{
 
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 380px;
-gap:60px;
-align-items:center;
-}
+color:#2c6df2;
 
-.hero h1{
-font-size:44px;
-margin:10px 0;
-}
-
-.hero-text{
-max-width:500px;
-}
-
-.hero-actions{
-margin-top:25px;
-}
-
-.hero-image-card img{
-width:100%;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
-
-.profile-photo{
-width:320px;
-border-radius:14px;
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-}
-
-.btn{
-display:inline-block;
-padding:12px 22px;
-background:#2c6df2;
-color:white;
-text-decoration:none;
-border-radius:6px;
-margin-right:12px;
-font-weight:500;
-}
-
-.btn-secondary{
-background:transparent;
-border:1px solid white;
-}
-
-.section{
-padding:90px 0;
-}
-
-.section-alt{
-background:#f1f3f7;
-}
-
-.section-label{
-text-transform:uppercase;
-font-size:12px;
-letter-spacing:1px;
-color:#888;
-}
-
-.section-label-light{
-color:#ccc;
-}
-
-.narrow{
-max-width:700px;
-}
-
-.card-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 6px 18px rgba(0,0,0,.05);
-}
-
-.two-col{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:30px;
-}
-
-.panel{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 6px 18px rgba(0,0,0,.05);
-}
-
-.clean-list{
-padding-left:20px;
-}
-
-.resume-block{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.contact-actions{
-margin-top:20px;
-}
-
-.site-footer{
-background:#111;
-color:#aaa;
-text-align:center;
-padding:30px;
-}
-
-.speaking-banner{
-position:relative;
-min-height:500px;
-display:flex;
-align-items:center;
-background:
-linear-gradient(rgba(10,25,40,.80),rgba(10,25,40,.85)),
-url('/assets/img/jim-kaiser-speaking.png');
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-.speaking-overlay{
-position:absolute;
-inset:0;
-}
-
-.speaking-content{
-position:relative;
-z-index:2;
-max-width:650px;
-padding:80px 0;
-}
-
-@media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.two-col{
-grid-template-columns:1fr;
-}
-
-.card-grid{
-grid-template-columns:1fr;
-}
-
-.resume-block{
-flex-direction:column;
-align-items:flex-start;
-gap:20px;
-}
+transform:translateY(-1px);
 
 }
