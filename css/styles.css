@@ -1,71 +1,427 @@
 /* =========================
+BASE
+========================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:#f5f7fa;
+  color:#1a1f26;
+  line-height:1.6;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:1100px;
+  max-width:92%;
+  margin:auto;
+}
+
+/* =========================
 HEADER / NAVIGATION
 ========================= */
 
 .site-header{
-
-position:sticky;
-top:0;
-z-index:1000;
-
-background:rgba(255,255,255,.92);
-
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-
-border-bottom:1px solid rgba(0,0,0,.06);
-
-box-shadow:0 4px 20px rgba(0,0,0,.04);
-
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+  box-shadow:0 4px 20px rgba(0,0,0,.04);
 }
 
 .nav-wrap{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:20px 0;
-
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
 }
 
 .logo{
-
-font-weight:700;
-text-decoration:none;
-color:#1a1f26;
-
-font-size:18px;
-letter-spacing:.3px;
-
+  font-weight:700;
+  text-decoration:none;
+  color:#1a1f26;
+  font-size:18px;
+  letter-spacing:.3px;
 }
 
 .nav{
-
-display:flex;
-align-items:center;
-
+  display:flex;
+  align-items:center;
 }
 
 .nav a{
-
-margin-left:26px;
-
-text-decoration:none;
-color:#444;
-
-font-weight:500;
-
-transition:
-color .2s ease,
-transform .15s ease;
-
+  margin-left:26px;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+  transition:color .2s ease, transform .15s ease;
 }
 
 .nav a:hover{
+  color:#2c6df2;
+  transform:translateY(-1px);
+}
 
-color:#2c6df2;
+/* =========================
+HERO
+========================= */
 
-transform:translateY(-1px);
+.hero{
+  position:relative;
+  background:
+    linear-gradient(rgba(10,25,40,.80), rgba(10,25,40,.88)),
+    url('/assets/img/skyline.png');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:120px 0;
+}
 
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:60px;
+  align-items:center;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:1.5px;
+  opacity:.82;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-size:44px;
+  line-height:1.1;
+  margin:10px 0 18px;
+}
+
+.hero-text{
+  max-width:520px;
+  font-size:18px;
+  color:rgba(255,255,255,.92);
+}
+
+.hero-actions{
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.hero-image-card{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.profile-photo{
+  width:320px;
+  border-radius:14px;
+  border:4px solid rgba(255,255,255,.35);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+  object-fit:cover;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 22px;
+  background:#2c6df2;
+  color:white;
+  border-radius:6px;
+  font-weight:600;
+  transition:transform .2s ease, background .2s ease, opacity .2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  opacity:.98;
+}
+
+.btn-secondary{
+  background:transparent;
+  border:1px solid white;
+  color:white;
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,.08);
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+.section{
+  padding:90px 0;
+}
+
+.section-alt{
+  background:#f1f3f7;
+}
+
+.section-label{
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#888;
+  margin-bottom:8px;
+}
+
+.section h2{
+  font-size:36px;
+  margin-bottom:20px;
+  line-height:1.2;
+}
+
+.narrow{
+  max-width:700px;
+}
+
+/* =========================
+SPEAKING BANNER
+========================= */
+
+.speaking-banner{
+  position:relative;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(8,18,32,.35), rgba(8,18,32,.55)),
+    url('/assets/img/jim-kaiser-speaking.png');
+  background-size:cover;
+  background-position:center 25%;
+  color:white;
+  overflow:hidden;
+}
+
+.speaking-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,16,29,.72) 0%,
+      rgba(7,16,29,.40) 45%,
+      rgba(7,16,29,.18) 100%
+    );
+  pointer-events:none;
+}
+
+.speaking-banner-inner{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+}
+
+.speaking-glass{
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.20);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  max-width:620px;
+}
+
+.speaking-banner h2{
+  margin:10px 0 18px;
+  font-size:44px;
+  line-height:1.15;
+  letter-spacing:-.5px;
+  color:white;
+}
+
+.speaking-banner p{
+  font-size:18px;
+  line-height:1.7;
+  color:rgba(255,255,255,.92);
+}
+
+.section-label-light{
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:1.2px;
+  color:rgba(255,255,255,.75);
+}
+
+/* =========================
+CARDS
+========================= */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:25px;
+  margin-top:30px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+/* =========================
+PANELS
+========================= */
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:30px;
+}
+
+.panel{
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+.clean-list{
+  padding-left:20px;
+}
+
+.clean-list li{
+  margin-bottom:10px;
+}
+
+/* =========================
+RESUME / CONTACT
+========================= */
+
+.resume-block{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+}
+
+.contact-actions{
+  margin-top:20px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.site-footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:30px;
+  margin-top:40px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width:980px){
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .profile-photo{
+    width:280px;
+  }
+
+  .card-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .two-col{
+    grid-template-columns:1fr;
+  }
+
+  .resume-block{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .speaking-banner{
+    min-height:440px;
+    background-position:center;
+  }
+
+  .speaking-glass{
+    padding:28px;
+    max-width:100%;
+  }
+
+  .speaking-banner h2{
+    font-size:30px;
+  }
+
+  .speaking-banner p{
+    font-size:16px;
+  }
+}
+
+@media (max-width:640px){
+  .hero{
+    padding:90px 0;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav{
+    display:none;
+  }
+
+  .speaking-banner{
+    min-height:420px;
+  }
 }
