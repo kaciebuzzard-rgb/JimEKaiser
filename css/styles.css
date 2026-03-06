@@ -1,31 +1,9 @@
-/* =========================
-BASE
-========================= */
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
-font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+font-family:Inter, sans-serif;
+margin:0;
 background:#f5f7fa;
 color:#1a1f26;
 line-height:1.6;
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-a{
-text-decoration:none;
 }
 
 .container{
@@ -34,131 +12,85 @@ max-width:92%;
 margin:auto;
 }
 
-/* =========================
-HEADER
-========================= */
-
 .site-header{
 background:white;
-border-bottom:1px solid #e6e9ee;
-position:sticky;
-top:0;
-z-index:100;
+border-bottom:1px solid #eee;
 }
 
 .nav-wrap{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 0;
+padding:20px 0;
 }
 
 .logo{
 font-weight:700;
-font-size:18px;
+text-decoration:none;
 color:#1a1f26;
+font-size:18px;
 }
 
 .nav a{
-margin-left:24px;
+margin-left:22px;
+text-decoration:none;
 color:#444;
 font-weight:500;
-transition:color .2s ease;
 }
-
-.nav a:hover{
-color:#2c6df2;
-}
-
-/* =========================
-HERO
-========================= */
 
 .hero{
-position:relative;
-background:
-linear-gradient(rgba(10,25,40,.80), rgba(10,25,40,.88)),
-url('/assets/img/skyline.png');
-background-size:cover;
-background-position:center;
+background:#0d1c2b;
 color:white;
 padding:120px 0;
 }
 
 .hero-grid{
 display:grid;
-grid-template-columns:1fr 360px;
+grid-template-columns:1fr 380px;
 gap:60px;
 align-items:center;
 }
 
-.eyebrow{
-text-transform:uppercase;
-font-size:12px;
-letter-spacing:1.5px;
-opacity:.8;
-margin-bottom:10px;
-}
-
 .hero h1{
-font-size:46px;
-line-height:1.1;
-margin-bottom:18px;
+font-size:44px;
+margin:10px 0;
 }
 
 .hero-text{
-font-size:18px;
-max-width:520px;
-opacity:.9;
+max-width:500px;
 }
 
 .hero-actions{
-margin-top:28px;
-display:flex;
-gap:14px;
-flex-wrap:wrap;
+margin-top:25px;
 }
 
-.hero-image-card{
-display:flex;
-justify-content:center;
-align-items:center;
+.hero-image-card img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 .profile-photo{
 width:320px;
 border-radius:14px;
-border:4px solid rgba(255,255,255,.35);
-box-shadow:0 25px 60px rgba(0,0,0,.30);
-object-fit:cover;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
-
-/* =========================
-BUTTONS
-========================= */
 
 .btn{
 display:inline-block;
 padding:12px 22px;
 background:#2c6df2;
 color:white;
+text-decoration:none;
 border-radius:6px;
-font-weight:600;
-transition:.2s ease;
-}
-
-.btn:hover{
-transform:translateY(-2px);
+margin-right:12px;
+font-weight:500;
 }
 
 .btn-secondary{
 background:transparent;
 border:1px solid white;
 }
-
-/* =========================
-SECTIONS
-========================= */
 
 .section{
 padding:90px 0;
@@ -172,44 +104,30 @@ background:#f1f3f7;
 text-transform:uppercase;
 font-size:12px;
 letter-spacing:1px;
-color:#7a7a7a;
-margin-bottom:8px;
+color:#888;
 }
 
-.section h2{
-font-size:36px;
-margin-bottom:20px;
+.section-label-light{
+color:#ccc;
 }
 
 .narrow{
 max-width:700px;
 }
 
-/* =========================
-CARDS
-========================= */
-
 .card-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:26px;
+gap:25px;
 margin-top:30px;
 }
 
 .card{
 background:white;
-padding:28px;
+padding:25px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,.05);
 }
-
-.card h3{
-margin-bottom:10px;
-}
-
-/* =========================
-PANELS
-========================= */
 
 .two-col{
 display:grid;
@@ -220,7 +138,7 @@ margin-top:30px;
 
 .panel{
 background:white;
-padding:32px;
+padding:30px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,.05);
 }
@@ -229,94 +147,66 @@ box-shadow:0 6px 18px rgba(0,0,0,.05);
 padding-left:20px;
 }
 
-.clean-list li{
-margin-bottom:10px;
-}
-
-/* =========================
-RESUME
-========================= */
-
 .resume-block{
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:40px;
 }
-
-/* =========================
-CONTACT
-========================= */
 
 .contact-actions{
 margin-top:20px;
-display:flex;
-gap:14px;
-flex-wrap:wrap;
 }
-
-/* =========================
-FOOTER
-========================= */
 
 .site-footer{
 background:#111;
 color:#aaa;
 text-align:center;
 padding:30px;
-margin-top:40px;
 }
 
-/* =========================
-RESPONSIVE
-========================= */
+.speaking-banner{
+position:relative;
+min-height:500px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(10,25,40,.80),rgba(10,25,40,.85)),
+url('/assets/img/jim-kaiser-speaking.png');
+background-size:cover;
+background-position:center;
+color:white;
+}
 
-@media (max-width:980px){
+.speaking-overlay{
+position:absolute;
+inset:0;
+}
+
+.speaking-content{
+position:relative;
+z-index:2;
+max-width:650px;
+padding:80px 0;
+}
+
+@media(max-width:900px){
 
 .hero-grid{
 grid-template-columns:1fr;
-gap:40px;
-}
-
-.profile-photo{
-width:280px;
-}
-
-.card-grid{
-grid-template-columns:repeat(2,1fr);
 }
 
 .two-col{
 grid-template-columns:1fr;
 }
 
-.resume-block{
-flex-direction:column;
-align-items:flex-start;
-}
-
-}
-
-@media (max-width:640px){
-
-.hero{
-padding:90px 0;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero-text{
-font-size:16px;
-}
-
 .card-grid{
 grid-template-columns:1fr;
 }
 
-.nav{
-display:none;
+.resume-block{
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
 }
 
 }
