@@ -1,271 +1,307 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jim Kaiser | Chief Financial Officer</title>
-
-<meta name="description" content="Executive finance leader and Chief Financial Officer with expertise in financial strategy, enterprise performance, and operational leadership.">
-
-<link rel="stylesheet" href="./css/styles.css">
-</head>
-
-<body>
-
-<header class="site-header">
-  <div class="container nav-wrap">
-
-    <a href="#top" class="logo">Jim Kaiser</a>
-
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#leadership">Snapshot</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
-<main id="top">
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container hero-grid">
-
-<div class="hero-copy">
-
-<p class="eyebrow">Chief Financial Officer</p>
-
-<h1>
-Financial leadership grounded in strategy, discipline, and growth
-</h1>
-
-<p class="hero-text">
-Jim Kaiser is a senior finance executive specializing in financial strategy,
-operational leadership, forecasting, capital planning, and enterprise performance.
-</p>
-
-<div class="hero-actions">
-
-<a class="btn" href="/Resume.pdf" download>
-Download Resume
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.linkedin.com/in/jameskaiser1/"
-target="_blank"
-rel="noopener noreferrer">
-LinkedIn
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image-card">
-
-<img
-src="/assets/img/jim-kaiser-cfo-headshot.png"
-alt="Jim Kaiser Chief Financial Officer"
-class="profile-photo">
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<div class="container narrow">
-
-<p class="section-label">About</p>
-
-<h2>Executive Financial Leadership</h2>
-
-<p>
-Jim Kaiser is a finance executive with extensive experience guiding
-organizations through growth, operational improvement, and complex
-financial environments.
-</p>
-
-<p>
-His leadership combines financial rigor with practical business insight,
-helping organizations strengthen financial discipline while enabling
-long-term enterprise performance.
-</p>
-
-<p>
-Jim has led financial strategy across forecasting, capital planning,
-performance management, and executive reporting, partnering closely with
-leadership teams to support informed decision-making and sustainable growth.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- COMMUNITY ENGAGEMENT -->
-
-<section class="section section-alt community-engagement">
-
-<div class="container narrow">
-
-<p class="section-label">Community Engagement</p>
-
-<h2>Responsible Leadership</h2>
-
-<p>
-Jim Kaiser believes effective leadership extends beyond financial
-performance. He values community engagement as an important part of
-responsible executive leadership and long-term organizational stewardship.
-</p>
-
-<p>
-Through service, volunteerism, and support of community-focused
-initiatives, he brings the same principles that guide his professional
-work—discipline, accountability, and sustainability—to the organizations
-and communities he serves.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- LEADERSHIP SNAPSHOT -->
-
-<section class="section" id="leadership">
-
-<div class="container">
-
-<p class="section-label">Leadership Snapshot</p>
-
-<h2>What Jim brings to the CFO role</h2>
-
-<div class="two-col">
-
-<div class="panel">
-
-<h3>Strategic Value</h3>
-
-<ul class="clean-list">
-<li>Enterprise financial leadership</li>
-<li>Board and executive reporting</li>
-<li>Capital planning</li>
-<li>Performance management</li>
-<li>Operational partnership</li>
-</ul>
-
-</div>
-
-<div class="panel">
-
-<h3>Leadership Approach</h3>
-
-<ul class="clean-list">
-<li>Data-driven decisions</li>
-<li>Calm leadership during change</li>
-<li>Strong accountability</li>
-<li>Collaborative teamwork</li>
-<li>Long-term enterprise focus</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RESUME -->
-
-<section class="section section-alt" id="resume">
-
-<div class="container resume-block">
-
-<div>
-
-<p class="section-label">Resume</p>
-
-<h2>Download Jim Kaiser’s resume</h2>
-
-<p>
-Access a PDF version of Jim’s professional background,
-leadership experience, and executive qualifications.
-</p>
-
-</div>
-
-<div>
-
-<a class="btn" href="/Resume.pdf" download>
-Download PDF Resume
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="section" id="contact">
-
-<div class="container narrow about-center">
-
-<p class="section-label">Contact</p>
-
-<h2>Connect with Jim</h2>
-
-<p>
-For executive leadership opportunities, board roles,
-consulting discussions, or speaking engagements.
-</p>
-
-<div class="contact-actions">
-
-<a class="btn" href="mailto:jimkaiser@live.com">
-Email Jim
-</a>
-
-<a class="btn btn-secondary btn-dark-outline"
-href="https://www.linkedin.com/in/jameskaiser1/"
-target="_blank"
-rel="noopener noreferrer">
-LinkedIn
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<footer class="site-footer">
-
-<div class="container">
-
-<p>© 2026 Jim Kaiser</p>
-
-</div>
-
-</footer>
-
-</body>
-</html>
+/* =====================================================
+GLOBAL RESET
+===================================================== */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+color:#1f2933;
+line-height:1.6;
+background:#ffffff;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:1100px;
+max-width:92%;
+margin:auto;
+}
+
+.container.narrow{
+max-width:760px;
+}
+
+/* =====================================================
+HEADER / NAV
+===================================================== */
+
+.site-header{
+position:sticky;
+top:0;
+background:white;
+border-bottom:1px solid #e5e7eb;
+z-index:1000;
+}
+
+.nav-wrap{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 0;
+}
+
+.logo{
+font-weight:700;
+font-size:18px;
+letter-spacing:.04em;
+}
+
+.nav{
+display:flex;
+gap:28px;
+font-size:14px;
+font-weight:500;
+}
+
+.nav a{
+opacity:.8;
+}
+
+.nav a:hover{
+opacity:1;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero{
+padding:100px 0;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 420px;
+gap:60px;
+align-items:center;
+}
+
+.eyebrow{
+font-size:.75rem;
+letter-spacing:.15em;
+text-transform:uppercase;
+font-weight:700;
+color:#6b7280;
+margin-bottom:14px;
+}
+
+.hero h1{
+font-size:clamp(38px,5vw,52px);
+line-height:1.15;
+margin-bottom:20px;
+}
+
+.hero-text{
+font-size:1.1rem;
+color:#4b5563;
+max-width:520px;
+margin-bottom:28px;
+}
+
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+/* =====================================================
+BUTTONS
+===================================================== */
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:6px;
+background:#111827;
+color:white;
+font-size:14px;
+font-weight:600;
+}
+
+.btn:hover{
+opacity:.9;
+}
+
+.btn-secondary{
+background:#e5e7eb;
+color:#111827;
+}
+
+.btn-dark-outline{
+background:transparent;
+border:1px solid #111827;
+}
+
+/* =====================================================
+HERO IMAGE
+===================================================== */
+
+.hero-image-card{
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.profile-photo{
+width:100%;
+height:auto;
+}
+
+/* =====================================================
+SECTIONS
+===================================================== */
+
+.section{
+padding:80px 0;
+}
+
+.section-alt{
+background:#f7f8fa;
+}
+
+.section-label{
+font-size:.8rem;
+letter-spacing:.15em;
+text-transform:uppercase;
+font-weight:700;
+color:#6b7280;
+margin-bottom:12px;
+}
+
+.section h2{
+font-size:clamp(30px,4vw,40px);
+margin-bottom:20px;
+}
+
+.section p{
+font-size:1.05rem;
+line-height:1.8;
+margin-bottom:18px;
+color:#374151;
+}
+
+/* =====================================================
+COMMUNITY SECTION
+===================================================== */
+
+.community-engagement{
+background:#f7f8fa;
+}
+
+/* =====================================================
+LEADERSHIP SNAPSHOT
+===================================================== */
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
+}
+
+.panel{
+background:white;
+padding:28px;
+border-radius:8px;
+box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.panel h3{
+margin-bottom:12px;
+}
+
+.clean-list{
+list-style:none;
+padding:0;
+margin-top:12px;
+}
+
+.clean-list li{
+margin-bottom:10px;
+}
+
+/* =====================================================
+RESUME SECTION
+===================================================== */
+
+.resume-block{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+/* =====================================================
+CONTACT
+===================================================== */
+
+.about-center{
+text-align:center;
+}
+
+.contact-actions{
+margin-top:24px;
+display:flex;
+gap:14px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.site-footer{
+border-top:1px solid #e5e7eb;
+padding:30px 0;
+text-align:center;
+font-size:14px;
+color:#6b7280;
+}
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media (max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero-image-card{
+max-width:420px;
+}
+
+}
+
+@media (max-width:768px){
+
+.two-col{
+grid-template-columns:1fr;
+}
+
+.nav{
+display:none;
+}
+
+}
